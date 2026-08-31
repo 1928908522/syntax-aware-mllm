@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+data/*
+!data/.gitkeep
+checkpoints/*
+!checkpoints/.gitkeep
+outputs/*
+!outputs/.gitkeep
+assets/figures/*
+!assets/figures/*.png
+*.checkpoint
+*.log
+.env

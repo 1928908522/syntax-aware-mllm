@@ -1,0 +1,68 @@
+{
+  "negative_construction": {
+    "sample_scope": "Approximately 10k MSCOCO caption pairs per setting",
+    "methods": [
+      {
+        "name": "Top-K triple",
+        "n": 10000,
+        "contradiction_pct": 84.8,
+        "ted": 1.703,
+        "dependency_jaccard": 0.582,
+        "semantic_similarity": 0.839,
+        "combined_score": 0.766
+      },
+      {
+        "name": "Random triple",
+        "n": 9988,
+        "contradiction_pct": 74.8,
+        "ted": 6.318,
+        "dependency_jaccard": 0.116,
+        "semantic_similarity": 0.577,
+        "combined_score": 0.394
+      },
+      {
+        "name": "All triples",
+        "n": 9987,
+        "contradiction_pct": 74.86,
+        "ted": 6.273,
+        "dependency_jaccard": 0.109,
+        "semantic_similarity": 0.585,
+        "combined_score": 0.398
+      },
+      {
+        "name": "No triple",
+        "n": 9982,
+        "contradiction_pct": 72.24,
+        "ted": 6.099,
+        "dependency_jaccard": 0.149,
+        "semantic_similarity": 0.604,
+        "combined_score": 0.423
+      }
+    ]
+  },
+  "syntax_target_heldout": {
+    "n": 100,
+    "models": [
+      {
+        "name": "Partial DPO",
+        "answer_accuracy_pct": 88.0,
+        "format_ok_pct": 100.0,
+        "strict_key_hit_pct": 16.0,
+        "triple_score": 0.291
+      },
+      {
+        "name": "5% Syntax RL",
+        "answer_accuracy_pct": 86.0,
+        "format_ok_pct": 100.0,
+        "strict_key_hit_pct": 50.0,
+        "triple_score": 0.712
+      }
+    ],
+    "pairwise_changes": {
+      "miss_to_hit": 37,
+      "hit_to_miss": 3,
+      "answer_errors_fixed": 4,
+      "new_answer_errors": 6
+    }
+  }
+}

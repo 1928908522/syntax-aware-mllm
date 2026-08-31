@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "syntax-aware-mllm"
+version = "0.1.0"
+description = "Syntax-preserving hard negatives and syntax-first fine-tuning for multimodal LLMs"
+requires-python = ">=3.10"
+dependencies = [
+  "accelerate>=1.0",
+  "numpy>=2.0",
+  "peft>=0.14",
+  "Pillow>=10.0",
+  "qwen-vl-utils>=0.0.10",
+  "requests>=2.31",
+  "spacy>=3.8",
+  "torch>=2.5",
+  "transformers>=4.49",
+  "zss>=1.2",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+visualization = ["matplotlib>=3.9"]
+
+[tool.setuptools.packages.find]
+include = ["syntax_visual_router*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
